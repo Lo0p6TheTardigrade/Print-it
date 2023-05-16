@@ -1,6 +1,7 @@
 const slides = [
   {
-    image: 'slide1.jpg',
+    image: '<img src="assets/images/slideshow/slide2.jpg" />',
+    // image: 'slide1.jpg',
     tagLine: 'Impressions tous formats <span>en boutique et en ligne</span>',
   },
   {
@@ -18,17 +19,27 @@ const slides = [
 ];
 const arrowLeft = document.querySelector('.arrow_left');
 const arrowRight = document.querySelector('.arrow_right');
+const bulletPoint = document.querySelector('.dot');
 
 arrowLeft.addEventListener('click', () => {
   console.log('click left');
 });
 arrowRight.addEventListener('click', () => {
   console.log('click right');
+  for (let i = 0; i < slides.length; i++) {
+    // const element = array[index];
+    // document.querySelector('.banner-img').innerHTML = '<img src="' + slides.image + '" />';
+    document.querySelector('.banner-img').innerHTML = slides[i].image;
+    document.querySelector('#banner p').innerHTML = slides[i].tagLine;
+    console.log(slides);
+  }
 });
-for (let i = 0; i < slides.length; i++) {
-  // const element = array[index];
-  document.querySelector('.banner-img').innerHTML = '<img src="' + slides.image + '" />';
-  document.querySelector('#banner p').innerText = slides[i].tagLine;
-  console.log(slides);
-  document.querySelector('.dots').innerHTML = '<div class="dot "></div><div class="dot dot_selected"></div><div class="dot dot_selected"></div><div class="dot dot_selected"></div>';
-}
+document.querySelector('.dots').innerHTML = '<div class="dot "></div><div class="dot dot_selected"></div><div class="dot dot_selected"></div><div class="dot dot_selected"></div>';
+// for (let i = 0; i < slides.length; i++) {
+//   // const element = array[index];
+//   // document.querySelector('.banner-img').innerHTML = '<img src="' + slides.image + '" />';
+//   document.querySelector('.banner-img').innerHTML = slides[i].image;
+//   document.querySelector('#banner p').innerHTML = slides[i].tagLine;
+//   console.log(slides);
+//   document.querySelector('.dots').innerHTML = '<div class="dot "></div><div class="dot dot_selected"></div><div class="dot dot_selected"></div><div class="dot dot_selected"></div>';
+// }
