@@ -3,26 +3,18 @@ const slides = [
   {
     image: 'slide1.jpg',
     tagLine: 'Impressions tous formats <span>en boutique et en ligne</span>',
-    // dot: 'dot_selected',
-    dotSel: 'dot_selected',
   },
   {
     image: 'slide2.jpg',
     tagLine: 'Tirages haute définition grand format <span>pour vos bureaux et events</span>',
-    // dot: 'dot_selected',
-    dotSel: 'dot_selected',
   },
   {
     image: 'slide3.jpg',
     tagLine: 'Grand choix de couleurs <span>de CMJN aux pantones</span>',
-    // dot: 'dot_selected',
-    dotSel: 'dot_selected',
   },
   {
     image: 'slide4.png',
     tagLine: 'Autocollants <span>avec découpe laser sur mesure</span>',
-    // dot: 'dot_selected',
-    dotSel: 'dot_selected',
   },
 ];
 // console.log(slides);
@@ -44,7 +36,7 @@ const dotsDiv = document.querySelector('.dots');
 // console.log(dotsDiv);
 
 const dots = document.getElementsByClassName('dot');
-console.log(dots);
+// console.log(dots);
 
 // ForEach object in slides
 slides.forEach(() => {
@@ -56,7 +48,7 @@ dots[0].classList.add('dot_selected');
 
 // Create src attribute for slideshow
 document.querySelector('.banner-img').setAttribute('src', './assets/images/slideshow/' + slides[0].image);
-document.querySelector('.dot').classList.add(slides[i].dotSel);
+document.querySelector('.dot').classList.add('dot_selected');
 
 arrowLeft.addEventListener('click', () => {
   console.log('click left');
