@@ -17,7 +17,6 @@ const slides = [
     tagLine: 'Autocollants <span>avec découpe laser sur mesure</span>',
   },
 ];
-// console.log(slides);
 
 // Variable index for slides
 let i = 0;
@@ -29,14 +28,11 @@ const arrowRight = document.querySelector('.arrow_right');
 // Create banner img
 const bannerImgCreate = document.getElementById('banner');
 bannerImgCreate.appendChild(document.createElement('img')).classList.add('banner-img');
-// console.log(bannerImgCreate);
 
 // Constants for the dots
 const dotsDiv = document.querySelector('.dots');
-// console.log(dotsDiv);
 
 const dots = document.getElementsByClassName('dot');
-// console.log(dots);
 
 // ForEach object in slides
 slides.forEach(() => {
@@ -64,7 +60,6 @@ arrowLeft.addEventListener('click', () => {
   // ForEach for dots
   Array.from(dots).forEach((dot) => {
     dot.classList.remove('dot_selected');
-    console.log(dot);
   });
   dots[i].classList.add('dot_selected');
 });
@@ -83,7 +78,6 @@ arrowRight.addEventListener('click', () => {
   // ForEach for dots
   Array.from(dots).forEach((dot) => {
     dot.classList.remove('dot_selected');
-    console.log(dot);
   });
   dots[i].classList.add('dot_selected');
 });
